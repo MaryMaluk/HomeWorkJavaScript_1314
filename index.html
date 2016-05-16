@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programming__TEST</title>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/tamplate.js"></script>
+    <script type="text/javascript" src="js/task.js"></script>
+	
+</head>
+<body>
+
+<h1>Тест по программированию</h1>
+<button class="test">Пройти тест</button>
+
+<script type="text/tamplate" id="test">
+<div class="container">
+
+ <div class="center">
+   <% for (var i = 0; i < data111.length; i++) { %>    
+	       <div><%= data111[i].question %></div>
+	<ul>
+			<% for (var j = 0; j < data111[i].answer.length; j++) { %>
+			<li><input type="checkbox" name="<%= data111[i].name %>" class="checkbox" value="<%= data111[i].check[j] %>"><%= data111[i].answer[j] %></li>
+			<% }; %>
+	</ul>
+
+<% }; %>
+ </div>
+</div>
+</script>
+<button class="check">Проверить мои результаты</button>
+<div class="modWindow">
+	<div class="modText"></div>
+	<button class="modButton">OK</button>
+</div>
+
+</body>
+</html>
